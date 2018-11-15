@@ -1,8 +1,17 @@
 require 'user'
 
 describe User do
+  let(:karen) { User.new("Karen", 22) }
+
   it 'creates an instance of the User class' do
-    user = User.new
-    expect(user.instance_of? User).to be true
+    expect(karen.instance_of? User).to be true
+  end
+
+  it "stores the user's name" do
+    expect(karen.name).to eq "Karen"
+  end
+
+  it "stores the user's day of birth" do
+    expect(karen.day).to eq 22
   end
 end
