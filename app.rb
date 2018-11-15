@@ -10,7 +10,7 @@ class Greeter < Sinatra::Base
 
   post '/number-of-days' do
     p params
-    @user = User.new(params[:user_name, :user_day])
+    @user = User.new(params[:user_name, :user_day, :user_month])
   end
   # start the server if ruby file executed directly
   run! if app_file == $0
